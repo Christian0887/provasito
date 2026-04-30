@@ -10,17 +10,9 @@ if (isset($_GET['logout'])) {
     exit();
 }
 
-// --- 1. CONNESSIONE AL DATABASE ---
-$host = "localhost";
-$user = "root"; 
-$pass = "";     
-$db   = "miosito";
 
-$conn = mysqli_connect($host, $user, $pass, $db);
 
-if (!$conn) {
-    die("Connessione fallita: " . mysqli_connect_error());
-}
+require_once('config.php');
 
 // --- 2. CONFIGURAZIONE & PRODOTTI ---
 $paypal_email = "cariellochristian@gmail.com"; 

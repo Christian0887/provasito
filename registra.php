@@ -1,7 +1,7 @@
 <?php
+
 session_start();
-$conn = new mysqli("localhost", "root", "", "miosito");
-if($conn->connect_error) die("Errore DB: " . $conn->connect_error);
+require_once('config.php');
 
 $errore = ""; 
 $successo = "";
