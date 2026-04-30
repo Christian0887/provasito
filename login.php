@@ -1,8 +1,7 @@
 <?php
 session_start();
 // Connessione al database
-$conn = new mysqli("localhost", "root", "", "miosito");
-if($conn->connect_error) die("Errore DB: " . $conn->connect_error);
+require_once('config.php');
 
 $errore = "";
 if($_SERVER['REQUEST_METHOD'] === 'POST'){
